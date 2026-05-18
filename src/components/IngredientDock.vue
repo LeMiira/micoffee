@@ -20,11 +20,16 @@
     </transition>
 
     <!-- Carousel container -->
-    <div class="flex overflow-x-auto snap-x snap-mandatory fancy-scrollbar items-center mask-edges min-h-[90px]" style="padding: 0 calc(50% - 40px);">
+    <div 
+       ref="containerRef"
+       class="flex overflow-x-auto snap-x snap-mandatory fancy-scrollbar items-center mask-edges min-h-[90px]"
+    >
+       <!-- Left Spacer for centering first item -->
+       <div class="shrink-0 w-[calc(50%-40px)] pointer-events-none"></div>
        
        <!-- Temperature Toggle as first item -->
        <div class="snap-center shrink-0 flex flex-col items-center gap-2 cursor-pointer transition-all duration-300"
-            @click="activeIdx = 0"
+            @click="selectItem(0, $event)"
             :class="activeIdx === 0 ? 'scale-100 opacity-100 mx-2' : 'scale-75 opacity-50 hover:opacity-80'">
           <button @click="activeIdx === 0 ? isIced = !isIced : null" class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-colors duration-300" :class="isIced ? 'bg-blue-50 text-blue-500 border border-blue-200' : 'bg-[#fff5ee] text-[#d48866] border border-[#f5dbcf]'">
              <!-- Ice Icon -->
@@ -40,7 +45,7 @@
          v-for="(ing, idx) in activeIngredients" 
          :key="ing.id"
          class="snap-center shrink-0 flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 relative"
-         @click="activeIdx = idx + 1"
+         @click="selectItem(idx + 1, $event)"
          :class="(activeIdx === idx + 1) ? 'scale-100 opacity-100 mx-2' : 'scale-75 opacity-50 hover:opacity-80'"
        >
          <!-- Indicator dot if > 0 -->
@@ -52,6 +57,9 @@
          </div>
          <span class="text-[11px] font-bold uppercase tracking-widest transition-colors w-20 text-center truncate" :class="(activeIdx === idx + 1) ? 'text-stone-900' : 'text-stone-500'">{{ ing.id }}</span>
        </div>
+
+       <!-- Right Spacer for centering last item -->
+       <div class="shrink-0 w-[calc(50%-40px)] pointer-events-none"></div>
 
     </div>
   </div>
@@ -68,11 +76,23 @@ import ToppingIcon from './icons/ToppingIcon.vue'
 const { recipe, setIngredient, activeIngredients, isIced } = useRecipe()
 
 const activeIdx = ref(0) // 0 is temperature toggle, 1..N is activeIngredients
+const containerRef = ref(null)
 
 const activeIngredient = computed(() => {
     if (activeIdx.value === 0) return { id: 'temperature' }
     return activeIngredients.value[activeIdx.value - 1]
 })
+
+const selectItem = (idx, event) => {
+    activeIdx.value = idx
+    if (event && event.currentTarget) {
+        event.currentTarget.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        })
+    }
+}
 
 const decrease = () => {
     if(!activeIngredient.value || activeIngredient.value.id === 'temperature') return
