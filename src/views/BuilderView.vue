@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100dvh] w-screen bg-gradient-to-br from-[#f8f9fa] via-[#e6e2df] to-[#d5c6be] overflow-hidden flex flex-col font-sans select-none text-[#222]">
+  <div class="h-[100dvh] w-full max-w-full bg-gradient-to-br from-[#f8f9fa] via-[#e6e2df] to-[#d5c6be] overflow-hidden flex flex-col font-sans select-none text-[#222]">
     
     <!-- Ambient glowing orbs behind -->
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-white rounded-full blur-[100px] opacity-60 pointer-events-none"></div>

@@ -7,8 +7,12 @@
 
 <style>
 /* Global styles can stay here if needed */
-body {
+html, body, #root {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
