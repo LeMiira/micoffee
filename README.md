@@ -2,12 +2,18 @@
 
 Welcome to **MiCoffee**, a beautifully designed, mobile-first, zero-backend smart coffee ordering system for small coffeeshops. This app allows customers to build visually stunning coffee orders directly from their phones, and shop owners to manage and accept these orders from a kitchen tablet.
 
+🌟 **[Live Demo](http://miiiira.com/micoffee)**
+
 ## Features
 - **Ultra-Visual Ordering:** A fluid, game-like interface where customers can visually see their coffee being built.
+- **Multilingual Support:** Fully translated and supports multiple languages out-of-the-box, ensuring global accessibility for any shop owner!
 - **QR Code Table System:** Shop owners can generate QR codes for tables. When scanned (e.g. `example.com/?table=12`), orders are automatically tied to that table.
 - **Kitchen Interface:** A dedicated `/kitchen` route for baristas to see incoming orders, set prices, and update order status.
 - **Settings Panel:** A dedicated `/settings` route for shop owners to customize available ingredients and generate table QR codes.
 - **Zero Backend Required:** This open-source template uses `localStorage` to simulate the full order flow (for testing/demo purposes), meaning it can be hosted anywhere without complex databases or Node.js servers.
+
+## License
+This project is completely **FREE** and open source under the **Creative Commons Attribution (CC BY 4.0)** license. You are free to use, modify, and distribute it for both personal and commercial purposes!
 
 ## Installation for Coffeeshops
 
