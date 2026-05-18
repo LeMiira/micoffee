@@ -60,9 +60,19 @@ const table = ref('')
 const success = ref(false)
 
 onMounted(() => {
-    const params = new URLSearchParams(window.location.search)
+    // Check main search params first (e.g. /?table=12#/ or /?table=12)
+    let params = new URLSearchParams(window.location.search)
     if(params.has('table')) {
         table.value = params.get('table')
+        return
+    }
+    // Check hash query params (e.g. /#/?table=12)
+    const hashParts = window.location.hash.split('?')
+    if(hashParts.length > 1) {
+        params = new URLSearchParams(hashParts[1])
+        if(params.has('table')) {
+            table.value = params.get('table')
+        }
     }
 })
 

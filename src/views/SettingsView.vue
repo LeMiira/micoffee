@@ -43,5 +43,11 @@
 import { ref, computed } from 'vue'
 
 const tableNumber = ref('')
-const baseUrl = computed(() => window.location.origin)
+const baseUrl = computed(() => {
+    let path = window.location.pathname
+    if(path.endsWith('index.html')) {
+        path = path.substring(0, path.length - 10)
+    }
+    return window.location.origin + path
+})
 </script>
