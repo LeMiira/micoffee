@@ -6,11 +6,12 @@ Welcome to **MiCoffee**, a beautifully designed, mobile-first, zero-backend smar
 
 ## Features
 - **Ultra-Visual Ordering:** A fluid, game-like interface where customers can visually see their coffee being built.
-- **Multilingual Support:** Fully translated and supports multiple languages out-of-the-box, ensuring global accessibility for any shop owner!
+- **Multilingual Support & Globe Selector:** Fully translated and supports 6 languages (English, Turkish, Farsi, Arabic, Spanish, Italian) out-of-the-box with a responsive globe dropdown header switcher!
 - **QR Code Table System:** Shop owners can generate QR codes for tables. When scanned (e.g. `example.com/?table=12`), orders are automatically tied to that table.
 - **Kitchen Interface:** A dedicated `/kitchen` route for baristas to see incoming orders, set prices, and update order status.
 - **Settings Panel:** A dedicated `/settings` route for shop owners to customize available ingredients and generate table QR codes.
-- **Zero Backend Required:** This open-source template uses `localStorage` to simulate the full order flow (for testing/demo purposes), meaning it can be hosted anywhere without complex databases or Node.js servers.
+- **Zero-Config Subdirectory Deploy:** Configured with relative build pathing and Hash Router—simply drop the build folder inside any shared hosting subdirectory (e.g., `/micoffee/`) and it will work instantly with zero server setup!
+- **Zero Backend Required:** Uses simulated local state via `localStorage` (perfect for simple, serverless operations, demoing, and quick tests). Easily connect it to Firebase or Supabase if database synchronization is needed.
 
 ## License
 This project is completely **FREE** and open source under the **Creative Commons Attribution (CC BY 4.0)** license. You are free to use, modify, and distribute it for both personal and commercial purposes!

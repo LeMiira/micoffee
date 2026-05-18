@@ -9,7 +9,7 @@
                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
             <div class="flex flex-col items-center min-w-[70px]">
-               <span class="text-xs font-bold uppercase tracking-widest text-[#a89083]">{{ activeIngredient.id }}</span>
+               <span class="text-xs font-bold uppercase tracking-widest text-[#a89083]">{{ activeIngredient.id === 'temperature' ? 'Temperature' : $t('ingredients.' + activeIngredient.id) }}</span>
                <div class="text-sm font-semibold tracking-tight">{{ recipe[activeIngredient.id] || 0 }}<span class="text-white/50 text-xs ml-0.5">{{ activeIngredient.id === 'espresso' ? 'x' : 'ml' }}</span></div>
             </div>
             <button @click="increase" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/25 active:scale-90 transition-all cursor-pointer">
@@ -37,7 +37,7 @@
              <!-- Hot Icon -->
              <svg v-else width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v4"/><path d="M14 2v4"/><path d="M7 6h10c1.7 0 3 1.3 3 3v6c0 3.3-2.7 6-6 6H10c-3.3 0-6-2.7-6-6V9c0-1.7 1.3-3 3-3Zm0 0v-4"/></svg>
           </button>
-          <span class="text-[11px] font-bold uppercase tracking-widest transition-colors w-20 text-center truncate" :class="activeIdx === 0 ? 'text-stone-900' : 'text-stone-500'">{{ isIced ? 'Iced' : 'Hot' }}</span>
+          <span class="text-[11px] font-bold uppercase tracking-widest transition-colors w-20 text-center truncate" :class="activeIdx === 0 ? 'text-stone-900' : 'text-stone-500'">{{ isIced ? $t('general.iced') : $t('general.hot') }}</span>
        </div>
 
        <!-- Ingredients -->
@@ -55,7 +55,7 @@
             :class="(activeIdx === idx + 1) ? 'shadow-lg bg-stone-900 border-stone-800' : 'bg-white hover:bg-stone-50'">
             <component :is="getIconFor(ing.id)" class="w-7 h-7 transition-colors" :class="(activeIdx === idx + 1) ? 'text-white' : 'text-stone-700'" />
          </div>
-         <span class="text-[11px] font-bold uppercase tracking-widest transition-colors w-20 text-center truncate" :class="(activeIdx === idx + 1) ? 'text-stone-900' : 'text-stone-500'">{{ ing.id }}</span>
+         <span class="text-[11px] font-bold uppercase tracking-widest transition-colors w-20 text-center truncate" :class="(activeIdx === idx + 1) ? 'text-stone-900' : 'text-stone-500'">{{ $t('ingredients.' + ing.id) }}</span>
        </div>
 
        <!-- Right Spacer for centering last item -->
@@ -73,9 +73,8 @@ import MilkIcon from './icons/MilkIcon.vue'
 import FlavorIcon from './icons/FlavorIcon.vue'
 import ToppingIcon from './icons/ToppingIcon.vue'
 
-const { recipe, setIngredient, activeIngredients, isIced } = useRecipe()
+const { recipe, setIngredient, activeIngredients, isIced, activeIdx } = useRecipe()
 
-const activeIdx = ref(0) // 0 is temperature toggle, 1..N is activeIngredients
 const containerRef = ref(null)
 
 const activeIngredient = computed(() => {
