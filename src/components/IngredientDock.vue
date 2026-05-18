@@ -84,11 +84,13 @@ const activeIngredient = computed(() => {
 
 const selectItem = (idx, event) => {
     activeIdx.value = idx
-    if (event && event.currentTarget) {
-        event.currentTarget.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center'
+    if (event && event.currentTarget && containerRef.value) {
+        const item = event.currentTarget
+        const container = containerRef.value
+        const targetScrollLeft = item.offsetLeft - (container.clientWidth / 2) + (item.clientWidth / 2)
+        container.scrollTo({
+            left: targetScrollLeft,
+            behavior: 'smooth'
         })
     }
 }
