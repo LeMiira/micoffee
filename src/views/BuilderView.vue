@@ -35,7 +35,7 @@
 
         <!-- Action / Order Button -->
         <transition name="fade-slide">
-            <div v-if="totalVolume > 0" class="px-1 w-full flex justify-center">
+            <div v-if="totalVolume > 0 && activeIdx === activeIngredients.length" class="px-1 w-full flex justify-center">
                 <button class="w-[80%] max-w-[300px] bg-stone-900 shadow-xl text-white rounded-full py-4 text-sm font-semibold tracking-wide active:scale-95 transition-transform flex items-center justify-center gap-2" @click="showOrderModal = true">
                     <span>Brew order</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -81,7 +81,7 @@ import AdminPanel from '../components/AdminPanel.vue'
 import { useRecipe } from '../composables/useRecipe'
 import { useOrdersStore } from '../stores/orders'
 
-const { totalVolume } = useRecipe()
+const { totalVolume, activeIdx, activeIngredients } = useRecipe()
 const store = useOrdersStore()
 
 const showOrderModal = ref(false)

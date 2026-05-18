@@ -5,11 +5,13 @@ const { defaultIngredients, availableIngredients } = useSettings();
 
 const recipe = ref({});
 const isIced = ref(false);
+const activeIdx = ref(0);
 
 const initRecipe = () => {
     defaultIngredients.forEach(ing => {
         recipe.value[ing.id] = 0;
     });
+    activeIdx.value = 0;
 };
 
 initRecipe();
@@ -59,6 +61,7 @@ export function useRecipe() {
   return {
     recipe,
     isIced,
+    activeIdx,
     activeIngredients,
     setIngredient,
     resetRecipe,
