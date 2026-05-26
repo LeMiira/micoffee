@@ -32,5 +32,20 @@
   "presets.latte": "Klasik Latte",
   "presets.americano": "Sade Americano",
   "presets.caramelMacchiato": "Karamel Macchiato",
-  "builder.intensity": "Yoğunluk"
+  "builder.intensity": "Yoğunluk",
+  "builder.brewOrder": "Siparişi Hazırla",
+  "modal.completeOrder": "Siparişi Tamamla",
+  "modal.nameLabel": "İsim (İsteğe Bağlı)",
+  "modal.namePlaceholder": "Bu kimin için?",
+  "modal.tableLabel": "Masa Numarası",
+  "modal.tablePlaceholder": "Masa numarasını girin",
+  "modal.orderSummary": "Sipariş Özeti",
+  "modal.sendToKitchen": "Mutfağa Gönder",
+  "modal.orderSent": "Sipariş Gönderildi!",
+  "status.waiting": "Mutfaktan onay bekleniyor...",
+  "status.accepted": "Mutfak kabul etti! Fiyat:",
+  "status.payBrew": "Öde ve Demle",
+  "status.brewing": "Kahveniz hazırlanıyor...",
+  "status.ready": "Kahveniz hazır! Lütfen tezgahtan alın.",
+  "status.dismiss": "Kapat"
 }

@@ -32,5 +32,20 @@
   "presets.latte": "لاته کلاسیک",
   "presets.americano": "آمریکانو ساده",
   "presets.caramelMacchiato": "ماکیاتو کارامل",
-  "builder.intensity": "شدت"
+  "builder.intensity": "شدت",
+  "builder.brewOrder": "ثبت سفارش",
+  "modal.completeOrder": "تکمیل سفارش",
+  "modal.nameLabel": "نام (اختیاری)",
+  "modal.namePlaceholder": "برای چه کسی؟",
+  "modal.tableLabel": "شماره میز",
+  "modal.tablePlaceholder": "شماره میز را وارد کنید",
+  "modal.orderSummary": "خلاصه سفارش",
+  "modal.sendToKitchen": "ارسال به آشپزخانه",
+  "modal.orderSent": "سفارش ارسال شد!",
+  "status.waiting": "در انتظار تایید آشپزخانه...",
+  "status.accepted": "آشپزخانه تایید کرد! قیمت:",
+  "status.payBrew": "پرداخت و دم کردن",
+  "status.brewing": "در حال دم کردن قهوه شما...",
+  "status.ready": "قهوه شما آماده است! لطفاً آن را از کانتر تحویل بگیرید.",
+  "status.dismiss": "بستن"
 }

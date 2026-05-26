@@ -32,5 +32,20 @@
   "presets.latte": "Classic Latte",
   "presets.americano": "Stark Americano",
   "presets.caramelMacchiato": "Caramel Macchiato",
-  "builder.intensity": "Intensity"
+  "builder.intensity": "Intensity",
+  "builder.brewOrder": "Brew Order",
+  "modal.completeOrder": "Complete Order",
+  "modal.nameLabel": "Name (Optional)",
+  "modal.namePlaceholder": "Who is this for?",
+  "modal.tableLabel": "Table Number",
+  "modal.tablePlaceholder": "Enter table number",
+  "modal.orderSummary": "Order Summary",
+  "modal.sendToKitchen": "Send to Kitchen",
+  "modal.orderSent": "Order Sent!",
+  "status.waiting": "Waiting for kitchen to review...",
+  "status.accepted": "Kitchen accepted! Price:",
+  "status.payBrew": "Pay & Brew",
+  "status.brewing": "Brewing your coffee...",
+  "status.ready": "Coffee is ready! Please pick it up at the counter.",
+  "status.dismiss": "Dismiss"
 }

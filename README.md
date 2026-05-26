@@ -1,5 +1,11 @@
 # MiCoffee - Smart Coffee Ordering System
 
+[![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=for-the-badge)](http://creativecommons.org/licenses/by/4.0/)
+
 **MiCoffee**, a beautifully designed, mobile-first, zero-backend smart coffee ordering system for small coffeeshops. This app allows customers to build visually stunning coffee orders directly from their phones, and shop owners to manage and accept these orders from a kitchen tablet.
 
 🌟 **[Live Demo](https://play.miiiira.com/micoffee)**

@@ -32,5 +32,20 @@
   "presets.latte": "لاتيه كلاسيكي",
   "presets.americano": "أمريكانو صافي",
   "presets.caramelMacchiato": "مكياتو بالكراميل",
-  "builder.intensity": "الكثافة"
+  "builder.intensity": "الكثافة",
+  "builder.brewOrder": "حضر الطلب",
+  "modal.completeOrder": "إتمام الطلب",
+  "modal.nameLabel": "الاسم (اختياري)",
+  "modal.namePlaceholder": "لمن هذا الطلب؟",
+  "modal.tableLabel": "رقم الطاولة",
+  "modal.tablePlaceholder": "أدخل رقم الطاولة",
+  "modal.orderSummary": "ملخص الطلب",
+  "modal.sendToKitchen": "إرسال إلى المطبخ",
+  "modal.orderSent": "تم إرسال الطلب!",
+  "status.waiting": "في انتظار مراجعة المطبخ...",
+  "status.accepted": "تم قبول الطلب! السعر:",
+  "status.payBrew": "الدفع والتحضير",
+  "status.brewing": "جاري تحضير قهوتك...",
+  "status.ready": "القهوة جاهزة! يرجى استلامها من المنصة.",
+  "status.dismiss": "إغلاق"
 }

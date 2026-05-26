@@ -32,5 +32,20 @@
   "presets.latte": "Latte Classico",
   "presets.americano": "Americano",
   "presets.caramelMacchiato": "Macchiato al Caramello",
-  "builder.intensity": "Intensità"
+  "builder.intensity": "Intensità",
+  "builder.brewOrder": "Ordina Caffè",
+  "modal.completeOrder": "Completa Ordine",
+  "modal.nameLabel": "Nome (Opzionale)",
+  "modal.namePlaceholder": "Per chi è?",
+  "modal.tableLabel": "Numero Tavolo",
+  "modal.tablePlaceholder": "Inserisci il numero del tavolo",
+  "modal.orderSummary": "Riepilogo Ordine",
+  "modal.sendToKitchen": "Invia in Cucina",
+  "modal.orderSent": "Ordine Inviato!",
+  "status.waiting": "In attesa di approvazione della cucina...",
+  "status.accepted": "Cucina accettata! Prezzo:",
+  "status.payBrew": "Paga e Prepara",
+  "status.brewing": "Preparazione del tuo caffè...",
+  "status.ready": "Il caffè è pronto! Si prega di ritirarlo al banco.",
+  "status.dismiss": "Chiudi"
 }
