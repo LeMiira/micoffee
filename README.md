@@ -1,8 +1,8 @@
 # MiCoffee - Smart Coffee Ordering System
 
-Welcome to **MiCoffee**, a beautifully designed, mobile-first, zero-backend smart coffee ordering system for small coffeeshops. This app allows customers to build visually stunning coffee orders directly from their phones, and shop owners to manage and accept these orders from a kitchen tablet.
+**MiCoffee**, a beautifully designed, mobile-first, zero-backend smart coffee ordering system for small coffeeshops. This app allows customers to build visually stunning coffee orders directly from their phones, and shop owners to manage and accept these orders from a kitchen tablet.
 
-🌟 **[Live Demo](http://miiiira.com/micoffee)**
+🌟 **[Live Demo](https://play.miiiira.com/micoffee)**
 
 ## Features
 - **Ultra-Visual Ordering:** A fluid, game-like interface where customers can visually see their coffee being built.
